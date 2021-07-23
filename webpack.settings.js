@@ -6,21 +6,10 @@
 require('dotenv').config();
 
 module.exports = {
-  // General
-  // ===========================================================================
-
-  name: 'projects.timschneider.xyz/countdown/',
-
-  // URLs
-  // ===========================================================================
-
   urls: {
     live: 'https://projects.timschneider.xyz/countdown/',
     puplicPath: 'dist/'
   },
-
-  // Paths
-  // ===========================================================================
 
   paths: {
     src: {
@@ -33,15 +22,9 @@ module.exports = {
     templates: './src/templates/'
   },
 
-  // Entries
-  // ===========================================================================
-
   entries: {
     app: ['./src/js/main.js', './src/css/main.scss']
   },
-
-  // Copy
-  // ===========================================================================
 
   copy: [
     // Favicons
@@ -51,9 +34,6 @@ module.exports = {
       noErrorOnMissing: true
     }
   ],
-
-  // Development Server
-  // ===========================================================================
 
   developmentServer: {
     public: () => {

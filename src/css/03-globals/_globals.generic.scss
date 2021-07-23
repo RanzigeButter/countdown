@@ -2,20 +2,6 @@
     # Globals - Generic
     ========================================================================  */
 
-// HTML
-// =============================================================================
-
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  image-rendering: auto;
-  box-sizing: border-box;
-}
-
-// Body
-// =============================================================================
-
 body {
   font-family: $font-family;
   font-size: $font-size__text;
@@ -23,9 +9,6 @@ body {
   color: $color__white;
   background-color: $color__black;
 }
-
-// Selection
-// =============================================================================
 
 ::selection {
   background-color: $color__accent;

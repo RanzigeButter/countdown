@@ -55,7 +55,6 @@ const SCSS = () => {
             plugins: [
               /* eslint-disable */
               require('autoprefixer')({
-                env: 'modern',
                 cascade: false
               })
               /* eslint-enable */

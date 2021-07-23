@@ -16,7 +16,6 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 
 // Plugins
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Development Server
@@ -80,7 +79,6 @@ const SCSS = () => {
             plugins: [
               /* eslint-disable */
               require('autoprefixer')({
-                env: 'modern',
                 cascade: false
               })
               /* eslint-enable */
@@ -111,15 +109,6 @@ const development = {
   plugins: [
     // Hot Module Replacement Plugin
     new webpack.HotModuleReplacementPlugin(),
-
-    // Friendly Errors Webpack Plugin
-    new FriendlyErrorsWebpackPlugin({
-      compilationSuccessInfo: {
-        messages: ['Your application is running at: localhost:8080'],
-        notes: ['Hot reloading is enabled.']
-      },
-      clearConsole: true
-    }),
 
     // HTML Webpack Plugin - Index
     new HtmlWebpackPlugin({

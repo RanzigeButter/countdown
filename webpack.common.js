@@ -37,7 +37,7 @@ const JavaScript = () => {
               },
               useBuiltIns: 'usage',
               targets: {
-                browsers: pkg.browserslist.modern
+                browsers: pkg.browserslist
               }
             }
           ]
@@ -58,31 +58,7 @@ const Images = () => {
     type: 'asset/resource',
     generator: {
       filename: 'images/[name][ext]'
-    },
-    use: [
-      {
-        loader: 'image-webpack-loader',
-        options: {
-          mozjpeg: {
-            quality: 80
-          },
-          gifsicle: {
-            optimizationLevel: 1,
-            colors: 256
-          },
-          pngquant: {
-            quality: 80,
-            speed: 3
-          },
-          optipng: {
-            enabled: false
-          },
-          svgo: {
-            enabled: false
-          }
-        }
-      }
-    ]
+    }
   };
 };
 
