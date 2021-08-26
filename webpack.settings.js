@@ -8,18 +8,7 @@ require('dotenv').config();
 module.exports = {
   urls: {
     live: 'https://projects.timschneider.xyz/countdown/',
-    puplicPath: 'dist/'
-  },
-
-  paths: {
-    src: {
-      base: './src/'
-    },
-    dist: {
-      base: './dist/',
-      clean: ['**/*']
-    },
-    templates: './src/templates/'
+    publicPath: 'dist/'
   },
 
   entries: {

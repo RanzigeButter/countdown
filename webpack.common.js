@@ -83,7 +83,7 @@ const common = {
   name: pkg.name,
   entry: settings.entries,
   output: {
-    path: path.resolve(__dirname, settings.paths.dist.base)
+    path: path.resolve(__dirname, './dist/')
   },
   module: {
     rules: [JavaScript(), Images(), Fonts()]

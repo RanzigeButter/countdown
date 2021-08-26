@@ -23,21 +23,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devServer = () => {
   return {
-    public: settings.developmentServer.public(),
     host: settings.developmentServer.host(),
     port: settings.developmentServer.port(),
     https: !!parseInt(settings.developmentServer.https(), 10),
-    contentBase: path.resolve(__dirname, settings.paths.templates),
-    watchContentBase: true,
-    watchOptions: {
-      poll: settings.developmentServer.poll(),
-      ignored: /node_modules/
+    static: {
+      directory: path.resolve(__dirname, './src/'),
+      publicPath: '/',
+      watch: {
+        poll: settings.developmentServer.poll(),
+        ignored: /node_modules/
+      }
     },
     open: true,
     hot: true,
-    hotOnly: true,
-    quiet: true,
-    disableHostCheck: true,
+    historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*'
     }

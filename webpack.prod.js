@@ -75,7 +75,7 @@ const SCSS = () => {
 const production = {
   mode: 'production',
   output: {
-    publicPath: settings.urls.live + settings.urls.puplicPath,
+    publicPath: settings.urls.live + settings.urls.publicPath,
     filename: 'js/[name].min.[contenthash].js'
   },
   module: {
@@ -99,7 +99,6 @@ const production = {
   plugins: [
     // Clean Webpack Plugin
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: settings.paths.dist.clean,
       verbose: false,
       dry: false
     }),
